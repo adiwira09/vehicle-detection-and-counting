@@ -11,7 +11,8 @@ This project implements a vehicle detection and counting system using the YOLOv8
 This notebook has been tested and executed on the following platforms with GPU acceleration:
 - Google Colab
 - Kaggle
-**_Using GPU accelerators significantly speeds up the detection and tracking processes._**
+
+**_using GPU accelerators significantly speeds up the detection and tracking processes._**
 
 ## File Definitions
 - `requirements.txt`: Lists the required libraries to run the project.
