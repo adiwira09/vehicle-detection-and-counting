@@ -26,13 +26,16 @@ This notebook has been tested and executed on the following platforms with GPU a
 - Line-based Counting: A line is defined within the video frame, and vehicles crossing this line are counted. The position of this line can be customized.
 - Annotations: The system adds bounding boxes, tracking traces, and labels to the video to visually represent detected vehicles. It also annotates the line used for counting and displays the vehicle count in the video.
 
+### Input Video (Before Detection)
+https://github.com/user-attachments/assets/62067b98-3ce8-4458-b030-2fe22b92f99b
+
+### Output Video (After Detection and Counting)
+https://github.com/user-attachments/assets/6fb2f106-1313-4a4b-9e91-b5abfb9dab1a
+
 ## Key Sections in the Code
 1. Install and Import Libraries: The notebook installs the necessary libraries (`ultralytics`, `supervision`, `numpy`, `tqdm`) and imports them for use in the project.
-
 2. Load the YOLOv8 Model: The YOLOv8 model is loaded and optimized for faster inference by fusing the layers.
-
 3. Load and Process Video: The input video (assets/toll_gate.mp4) is loaded, and a generator is set up to read the video frame by frame.
-
 4. Setup Detection and Tracking:
 - The system sets up the ByteTrack tracker to handle object tracking.
 - A line is defined in the video frame that will be used to count vehicles as they cross it.
