@@ -27,10 +27,10 @@ This notebook has been tested and executed on the following platforms with GPU a
 - Annotations: The system adds bounding boxes, tracking traces, and labels to the video to visually represent detected vehicles. It also annotates the line used for counting and displays the vehicle count in the video.
 
 ### Input Video (Before Detection)
-https://github.com/user-attachments/assets/62067b98-3ce8-4458-b030-2fe22b92f99b
+![](assets/toll_gate.gif)
 
 ### Output Video (After Detection and Counting)
-https://github.com/user-attachments/assets/6fb2f106-1313-4a4b-9e91-b5abfb9dab1a
+![](assets/toll_gate-result.gif)
 
 ## Key Sections in the Code
 1. Install and Import Libraries: The notebook installs the necessary libraries (`ultralytics`, `supervision`, `numpy`, `tqdm`) and imports them for use in the project.
