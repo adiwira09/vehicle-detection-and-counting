@@ -11,7 +11,7 @@ This project implements a vehicle detection and counting system using the YOLOv8
 This notebook has been tested and executed on the following platforms with GPU acceleration:
 - Google Colab
 - Kaggle
-** Using GPU accelerators significantly speeds up the detection and tracking processes.
+**_Using GPU accelerators significantly speeds up the detection and tracking processes._**
 
 ## File Definitions
 - `requirements.txt`: Lists the required libraries to run the project.
@@ -21,10 +21,10 @@ This notebook has been tested and executed on the following platforms with GPU a
 - `yolov8x.pt`: YOLO Pre-Trained model.
 
 ## Features
-- Vehicle Detection: YOLOv8 is used to detect objects in the video, with a focus on detecting cars (class 2) and buses (class 5).
-- Tracking: ByteTrack is implemented to track detected vehicles across multiple frames, ensuring accurate counting.
-- Line-based Counting: A line is defined within the video frame, and vehicles crossing this line are counted. The position of this line can be customized.
-- Annotations: The system adds bounding boxes, tracking traces, and labels to the video to visually represent detected vehicles. It also annotates the line used for counting and displays the vehicle count in the video.
+- **Vehicle Detection**: YOLOv8 is used to detect objects in the video, with a focus on detecting cars (class 2) and buses (class 5).
+- **Tracking**: ByteTrack is implemented to track detected vehicles across multiple frames, ensuring accurate counting.
+- **Line-based Counting**: A line is defined within the video frame, and vehicles crossing this line are counted. The position of this line can be customized.
+- **Annotations**: The system adds bounding boxes, tracking traces, and labels to the video to visually represent detected vehicles. It also annotates the line used for counting and displays the vehicle count in the video.
 
 ### Input Video (Before Detection)
 ![](assets/toll_gate.gif)
@@ -33,23 +33,23 @@ This notebook has been tested and executed on the following platforms with GPU a
 ![](assets/toll_gate-result.gif)
 
 ## Key Sections in the Code
-1. Install and Import Libraries: The notebook installs the necessary libraries (`ultralytics`, `supervision`, `numpy`, `tqdm`) and imports them for use in the project.
-2. Load the YOLOv8 Model: The YOLOv8 model is loaded and optimized for faster inference by fusing the layers.
-3. Load and Process Video: The input video (assets/toll_gate.mp4) is loaded, and a generator is set up to read the video frame by frame.
-4. Setup Detection and Tracking:
-- The system sets up the ByteTrack tracker to handle object tracking.
-- A line is defined in the video frame that will be used to count vehicles as they cross it.
+1. **Install and Import Libraries**: The notebook installs the necessary libraries (`ultralytics`, `supervision`, `numpy`, `tqdm`) and imports them for use in the project.
+2. **Load the YOLOv8 Model**: The YOLOv8 model is loaded and optimized for faster inference by fusing the layers.
+3. **Load and Process Video**: The input video (assets/toll_gate.mp4) is loaded, and a generator is set up to read the video frame by frame.
+4. **Setup Detection and Tracking**:
+    - The system sets up the ByteTrack tracker to handle object tracking.
+    - A line is defined in the video frame that will be used to count vehicles as they cross it.
 
-5. Annotate and Save Results:
-- For each video frame, the system performs detection and tracking.
-- Detected vehicles are filtered based on the selected classes (cars and buses).
-- Bounding boxes, labels, and tracking traces are annotated on the video.
-- The line used for counting is also annotated, and the count of vehicles crossing the line is displayed.
-- The annotated frames are saved into a new video file (toll_gate-result.mp4) in assets folder.
+5. **Annotate and Save Results**:
+    - For each video frame, the system performs detection and tracking.
+    - Detected vehicles are filtered based on the selected classes (cars and buses).
+    - Bounding boxes, labels, and tracking traces are annotated on the video.
+    - The line used for counting is also annotated, and the count of vehicles crossing the line is displayed.
+    - The annotated frames are saved into a new video file (toll_gate-result.mp4) in assets folder.
 
 ## Customization
-- Vehicle Classes: Modify the `selected_classes` list to include other vehicle types based on YOLO's class indices.
-- Counting Line Position: Adjust the coordinates of `LINE_START` and `LINE_END` to reposition the counting line in the video.
+- **Vehicle Classes**: Modify the `selected_classes` list to include other vehicle types based on YOLO's class indices.
+- **Counting Line Position**: Adjust the coordinates of `LINE_START` and `LINE_END` to reposition the counting line in the video.
 
 ## Results
 The output video will display:
